@@ -14,11 +14,16 @@ public class VolumeControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("XRI_Right_primary2DAxis") || (Input.GetButtonDown("XRI_Left_primary2DAxis")) && (radio.volume < 1))
+
+        float rightControl = Input.GetAxis("XRI_Right_Primary2DAxis_Horizontal");
+
+        float leftControl = Input.GetAxis("XRI_Left_Primary2DAxis_Horizontal");
+
+        if ((rightControl > 0) || (leftControl > 0) && (radio.volume <= 1))
         {
             radio.volume = radio.volume + 0.1f;
         }
-        if (Input.GetButtonDown("XRI_Right_secondary2DAxis") || (Input.GetButtonDown("XRI_Left_secondary2DAxis")) && (radio.volume > 0))
+        if ((rightControl < 0) || (leftControl < 0) && (radio.volume >= 0))
         {
             radio.volume = radio.volume - 0.1f;
         }
