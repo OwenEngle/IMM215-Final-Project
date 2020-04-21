@@ -93,7 +93,7 @@ Material:
     - WindSpeedFloat: 0.1
     - WindStrenghtFloat: 0.8
     - WindTurbulenceFloat: 0.4
-    - _AlphaCutoff: 0.5
+    - _AlphaCutoff: 0.956
     - _Bend: 1
     - _BendStrenght: 0.5
     - _BumpScale: 1
