@@ -11,15 +11,10 @@ public class VolumeManager : MonoBehaviour
     {
         radio.volume = 0.5f;
     }
-
-    // Update is called once per frame
     void Update()
     {
-
         float rightControl = Input.GetAxis("XRI_Right_Primary2DAxis_Vertical");
-
         float leftControl = Input.GetAxis("XRI_Left_Primary2DAxis_Vertical");
-
         if ((rightControl == 0) & (leftControl == 0))
         {
             volumeChange = false;
@@ -40,7 +35,6 @@ public class VolumeManager : MonoBehaviour
                 volumeChange = true;
             }
         }
-
         if (Input.GetButtonDown("XRI_Left_SecondaryButton") || Input.GetButtonDown("XRI_Right_SecondaryButton")) /*b or y*/
         {
             muted = false;
