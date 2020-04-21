@@ -5,6 +5,7 @@ using UnityEngine;
 public class VolumeControl : MonoBehaviour
 {
     public AudioSource radio;
+    bool volumeChange;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,19 @@ public class VolumeControl : MonoBehaviour
 
         float leftControl = Input.GetAxis("XRI_Left_Primary2DAxis_Horizontal");
 
-        if ((rightControl > 0) || (leftControl > 0) && (radio.volume <= 1))
+        if ((rightControl == 0) && (leftControl == 0))
+        {
+            volumeChange = false;
+        }
+        if ((radio.volume < 1) & !volumeChange & (rightControl > 0) | (leftControl > 0))
         {
             radio.volume = radio.volume + 0.1f;
+            volumeChange = true;
         }
-        if ((rightControl < 0) || (leftControl < 0) && (radio.volume >= 0))
+        if ((radio.volume > 0) & !volumeChange & (rightControl < 0) | (leftControl < 0))
         {
             radio.volume = radio.volume - 0.1f;
+            volumeChange = true;
         }
     }
 }
