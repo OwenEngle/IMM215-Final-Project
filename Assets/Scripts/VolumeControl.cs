@@ -20,16 +20,16 @@ public class VolumeControl : MonoBehaviour
 
         float leftControl = Input.GetAxis("XRI_Left_Primary2DAxis_Horizontal");
 
-        if ((rightControl == 0) && (leftControl == 0))
+        if ((rightControl == 0) & (leftControl == 0))
         {
             volumeChange = false;
         }
-        if ((radio.volume < 1) & !volumeChange & (rightControl > 0) | (leftControl > 0))
+        if ((radio.volume < 1) & !volumeChange && (rightControl > 0) | (leftControl > 0))
         {
             radio.volume = radio.volume + 0.1f;
             volumeChange = true;
         }
-        if ((radio.volume > 0) & !volumeChange & (rightControl < 0) | (leftControl < 0))
+        if ((radio.volume > 0) & !volumeChange && (rightControl < 0) | (leftControl < 0))
         {
             radio.volume = radio.volume - 0.1f;
             volumeChange = true;
