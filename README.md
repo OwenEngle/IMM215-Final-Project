@@ -25,7 +25,7 @@ In the inspector increase the number in the 'Song Urls' space to 1 or more, then
 
 (In the image above the game object with the audio source is called 'Radio').
 
-## Volume Manager script implimentation
+## Volume Manager Script Implimentation
 
 The Volume Manager script handles the volume control for VR input; implimentation is very simliar to the Streaming Handler script. Attach this script to the same game object that the Audio Streaming Handler is one. In the inspeactor under 'Volume manager' use the same audio source that was added to the Audio Streaming Handler and drag game object with that source it into the open Audio source space. Now the audio volume can be controlled through controller input (see VR volume Controls above). 
 
