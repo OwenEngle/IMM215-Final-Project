@@ -30,7 +30,7 @@ In the inspector increase the number in the 'Song Urls' space to 1 or more, then
 The Volume Manager script handles the volume control for VR input; implimentation is very simliar to the Streaming Handler script. Attach this script to the same game object that the Audio Streaming Handler is one. In the inspeactor under 'Volume manager' use the same audio source that was added to the Audio Streaming Handler and drag game object with that source it into the open Audio source space. Now the audio volume can be controlled through controller input (see VR volume Controls above). 
 
 ## Contributors
-Dyaln Boswell, Owen Engle, Wayeera Robertson, Professor Hunter Dyar of Chatham University.
+Dyaln Boswell (Volume Control: scripting mute and Play functions), Owen Engle (Volume control: scripting increasing and drecreasing volume functions, Song playlist script), Wayeera Robertson (Song playlist and streaming handler script), Professor Hunter Dyar of Chatham University (helped with everything, thank you!).
 
 Made with Unity
 
